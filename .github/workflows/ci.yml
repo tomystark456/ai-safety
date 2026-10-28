@@ -1,0 +1,48 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: site/web
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: site/web/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+
+  backend-and-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check perturbations, votes and input limits
+        run: python experiments/check_defence.py
+      - name: Check model routing
+        run: python experiments/test_model_modes.py
+      - name: Check published evidence
+        run: python experiments/check_public_results.py
+      - name: Check HTTP boundary with a stub upstream
+        run: python experiments/evaluate_boundary.py

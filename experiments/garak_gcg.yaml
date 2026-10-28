@@ -1,0 +1,19 @@
+---
+system:
+  verbose: 1
+run:
+  generations: 1
+  soft_probe_prompt_cap: 26
+  seed: 20261016
+plugins:
+  extended_detectors: false
+generators:
+  ollama:
+    OllamaGenerator:
+      max_tokens: 128
+      temperature: 0
+      timeout: 180
+    OllamaGeneratorChat:
+      max_tokens: 128
+      temperature: 0
+      timeout: 180

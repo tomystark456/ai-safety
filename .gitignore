@@ -1,0 +1,49 @@
+# Installed dependencies and generated builds
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local work, screenshots, exports, runtime logs and raw model completions
+/tmp/
+/output/
+/release/
+/experiments/logs/
+*.log
+*.tmp
+*.bak
+~$*
+
+# Credentials and machine-specific assistant/tool settings
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+.ollama/
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Model weights are installed separately with Ollama
+*.gguf
+*.ggml
+*.safetensors
+*.bin
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large optional upstream dataset; the exact 40-case fixture is committed
+/experiments/data/advbench_harmful_behaviors.csv

@@ -1,0 +1,16 @@
+{
+  "note": "SHA-256 of private source files. Original data remain local and are excluded from Git. Exports preserve scores, timing and identifiers; model completions, candidate texts and judge free-text reasons are omitted.",
+  "source_sha256": {
+    "experiments/logs/assignment3/ollama_summary.json": "57029a213351d32a5e96ecdb06e0762b6c795bae9c0f8df77e8189cc7b7a1ff6",
+    "experiments/logs/assignment3/boundary_summary.json": "c4a5e1be73ccde7d496b28d96ce01a21d57cfdb4230095b4ddbde7a4423e83f3",
+    "experiments/logs/assignment3/judge_summary.json": "3781f1ef650552077ce8e311515df1a4b570bb81a8ec1ac82963ce75f01e2d6f",
+    "experiments/logs/assignment3/benign_review.json": "f26a6078da7cf33a8476fc1cd7ac0d64e8d963a76644f3cd34d010ae63e75028",
+    "experiments/logs/assignment3/test_cases.json": "2912fbbe2a0c3fc675716767532c78d2122a2aaf43996a904c0e8235b49d49e8",
+    "experiments/logs/assignment3/integration_smoke.json": "371d8d7c5d0ea9c7dce64cfc105191a4b0c66d698923a980addd57a108150278",
+    "experiments/logs/assignment3/ollama_results.jsonl": "c02f626e5bdadd7ea0e35f122b5717bbe5613ad2e56156097ace04c6fdfb95f1",
+    "experiments/logs/assignment3/judge_results.jsonl": "ba5b535af8a79aa51b24e403fe73119c97dd0690643c6a926d00193c6328d4a0",
+    "experiments/logs/assignment3/boundary_results.jsonl": "c8609cab2a45acaac2717f4881304875b707b68aa9666dba4359654da1caae96",
+    "experiments/logs/assignment3/ollama_environment.json": "6d777483caa8a60edec583e6c58da8a3999a56baddf72db25d6305378c31810b",
+    "experiments/logs/advbench_summary.json": "09cd6f2a2d977fc2e490948c0f748897cac3be14bdf8f0c65d773bfe1427ace2"
+  }
+}

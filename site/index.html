@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Новости — локальный макет</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="logo" href="/">TENGRI<span>NEWS</span></a>
+      <nav class="sections">
+        <a class="on" href="#news">NEWS</a>
+        <a href="#life">LIFE</a>
+        <a href="#sport">SPORT</a>
+        <a href="#auto">AUTO</a>
+        <a href="#travel">TRAVEL</a>
+      </nav>
+      <div class="meta">учебный макет · чат vicuna:7b</div>
+    </div>
+    <div class="wrap subnav">
+      <a href="#news">Новости</a>
+      <a href="#news">Статьи</a>
+      <a href="#life">Погода</a>
+      <a href="#sport">Спорт</a>
+      <a href="#auto">Авто</a>
+      <a href="#travel">Путешествия</a>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <section>
+      <h1 id="news">Новости</h1>
+      <div class="hero" id="hero"></div>
+      <div class="bands">
+        <article class="band" id="life">
+          <h2>Life</h2>
+          <div class="cards" data-cat="life"></div>
+        </article>
+        <article class="band" id="sport">
+          <h2>Sport</h2>
+          <div class="cards" data-cat="sport"></div>
+        </article>
+        <article class="band" id="auto">
+          <h2>Auto</h2>
+          <div class="cards" data-cat="auto"></div>
+        </article>
+        <article class="band" id="travel">
+          <h2>Travel</h2>
+          <div class="cards" data-cat="travel"></div>
+        </article>
+      </div>
+    </section>
+    <aside>
+      <div class="tabs"><span class="on">Последние</span><span>Популярные</span></div>
+      <ul class="feed" id="feed"></ul>
+      <p class="note">Тексты выдуманы для макета. Это не сайт Tengrinews и не его материалы.</p>
+    </aside>
+  </main>
+
+  <div class="reader" id="reader" hidden>
+    <div class="reader-card">
+      <button type="button" class="close" id="close-reader">Закрыть</button>
+      <p class="kicker" id="reader-kicker"></p>
+      <h2 id="reader-title"></h2>
+      <p class="when" id="reader-when"></p>
+      <div class="reader-body" id="reader-body"></div>
+    </div>
+  </div>
+
+  <button class="chat-fab" id="chat-fab" type="button">Чат с vicuna</button>
+  <section class="chat" id="chat" hidden>
+    <header>
+      <div>
+        <strong>Редакторский чат</strong>
+        <small>ollama · vicuna:7b</small>
+      </div>
+      <button type="button" id="chat-close" aria-label="Закрыть">×</button>
+    </header>
+    <div class="log" id="log"></div>
+    <form id="form">
+      <textarea id="input" rows="2" placeholder="Напишите сообщение…" required></textarea>
+      <button type="submit" id="send">Отправить</button>
+    </form>
+    <p class="status" id="status">Модель на этом компьютере. Первый ответ может занять минуту, пока веса загрузятся.</p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

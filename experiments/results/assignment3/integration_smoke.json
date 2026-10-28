@@ -1,0 +1,8 @@
+{
+  "endpoint": "POST /api/chat",
+  "status": 200,
+  "model": "vicuna-guarded",
+  "smoothing_enabled": true,
+  "latency_s": 5.053536899999017,
+  "output_nonempty": true
+}

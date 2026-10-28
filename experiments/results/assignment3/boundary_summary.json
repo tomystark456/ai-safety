@@ -1,0 +1,80 @@
+{
+  "scope": "HTTP proxy with stub Ollama; no LLM inference",
+  "created_utc": "2026-10-27T07:51:54.431567+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cases_per_configuration": 48,
+  "sources_sha256": {
+    "experiments\\baseline_server.py": "d4de5139b22bbbc0087ffe9de6080af33ea3680d587f1a93d797782b99f2228e",
+    "site\\server.py": "987f7b6efd2232356d9663b3974cc07d7b245f37f53d674c2bbb9008e4b10dbd",
+    "site\\safety.py": "a470e46eef2149258d68b07e5c7d97587331844c079cef937a6355c597a655a7"
+  },
+  "outage_improved": {
+    "status": 502,
+    "body": {
+      "error": "defence_or_model_unavailable"
+    }
+  },
+  "configurations": {
+    "baseline": {
+      "groups": {
+        "forged_system": {
+          "n": 8,
+          "forwarded": 8,
+          "controlled_rejections": 0,
+          "disconnects": 0
+        },
+        "oversized_message": {
+          "n": 8,
+          "forwarded": 8,
+          "controlled_rejections": 0,
+          "disconnects": 0
+        },
+        "invalid_schema": {
+          "n": 8,
+          "forwarded": 0,
+          "controlled_rejections": 4,
+          "disconnects": 4
+        },
+        "legitimate": {
+          "n": 24,
+          "forwarded": 24,
+          "controlled_rejections": 0,
+          "disconnects": 0
+        }
+      },
+      "legitimate_mean_http_ms": 11.272312499916856,
+      "legitimate_median_http_ms": 12.470900000153051
+    },
+    "improved": {
+      "groups": {
+        "forged_system": {
+          "n": 8,
+          "forwarded": 0,
+          "controlled_rejections": 8,
+          "disconnects": 0
+        },
+        "oversized_message": {
+          "n": 8,
+          "forwarded": 0,
+          "controlled_rejections": 8,
+          "disconnects": 0
+        },
+        "invalid_schema": {
+          "n": 8,
+          "forwarded": 0,
+          "controlled_rejections": 8,
+          "disconnects": 0
+        },
+        "legitimate": {
+          "n": 24,
+          "forwarded": 24,
+          "controlled_rejections": 0,
+          "disconnects": 0
+        }
+      },
+      "legitimate_mean_http_ms": 5.204037500031215,
+      "legitimate_median_http_ms": 1.1283000003459165
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "version": {
+    "version": "0.40.9"
+  },
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cases_sha256": "c9caeab3fd35dfa293aa92aeed0aba773db2ea1e923f6db6546db0d2664eff0e",
+  "smoothllm_sha256": "29865257d048dcb94b62dfa936446e1cbd4863e657900dded5bf17af56a5f059",
+  "models": [
+    {
+      "name": "qwen3.5:4b",
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "details": {
+        "parent_model": "model.gguf",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.2B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560,
+        "runner": "llamacpp"
+      }
+    },
+    {
+      "name": "vicuna-guarded:latest",
+      "digest": "596070993fa9e257c13add6cf72a4d7b047f2afaefb5fdd0ba6ea41948b1923b",
+      "details": {
+        "parent_model": "vicuna:7b",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "7B",
+        "quantization_level": "Q4_0",
+        "context_length": 4096,
+        "embedding_length": 4096,
+        "runner": "ggml"
+      }
+    },
+    {
+      "name": "vicuna:7b",
+      "digest": "370739dc897bba0188d390bb7659e48d926cacc320875136d0115228023b1590",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": null,
+        "parameter_size": "7B",
+        "quantization_level": "Q4_0",
+        "context_length": 4096,
+        "embedding_length": 4096,
+        "runner": "ggml"
+      }
+    }
+  ]
+}
