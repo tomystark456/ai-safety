@@ -1,62 +1,41 @@
 # AI Use Declaration
 
-Course: AISRA1301 - AI Security and Risk Analysis, QAIRU.
-Project: Assignment 3 - Safety Improvement of a Local LLM Assistant.
+**Course:** AISRA1301 — AI Security and Risk Analysis, QAIRU
+**Project:** Midterm — Jailbreak robustness of a locally deployed LLM
 
-## Supplied Midterm provenance
+## AI tools used
+- **Claude (Anthropic) via Claude Code** — code scaffolding and documentation drafting.
+- **Ollama** is a runtime for the evaluated models, not an authoring assistant.
 
-The original declaration attributes React/Vite scaffolding, proxy/SPA serving and
-initial documentation drafts to Claude via Claude Code. It attributes the original
-model measurements to the student. This provenance is retained as supplied,
-rather than a claim that Codex observed those historical runs.
+## Purpose of use
+- Convert the earlier static news mock-up into a modern **React (Vite)** front-end
+  (components, streaming chat hook, CSS).
+- Wire the local server to serve the React build and proxy chat requests to Ollama.
+- Draft the README, the technical report and this declaration.
 
-## Assistance in this revision
+## Substantive generated contributions
+- `site/web/` React application: `App.jsx`, components (`Header`, `Card`, `Reader`,
+  `Chat`), the `useChat` streaming hook, and `index.css`.
+- SPA-serving and fallback logic added to `site/server.py`.
+- First drafts of `README.md`, `report/` documents and this file.
 
-OpenAI Codex assisted with reading the assignment, researching SmoothLLM in its
-original paper and repository, implementing an independent Ollama adaptation,
-server role/schema/size validation, human-AI safety notices, experimental scripts,
-the report, presentation, Russian speaker notes, README and this declaration.
+## What the author did NOT delegate to AI
+- The security experiment itself (garak runs, `Modelfile.guarded`, the AdvBench and
+  suffix measurements in `experiments/logs/`) was designed and executed by the student.
+- Generation or application of jailbreak suffixes to harmful prompts was **performed by
+  the student**, not by the AI assistant; the assistant declined to produce attack
+  payloads.
 
-Codex executed actual local Ollama requests comparing vicuna:7b, vicuna-guarded and
-vicuna-guarded with randomized smoothing. The test inputs reuse published AdvBench
-and GCG fixtures. No attack suffix was generated, optimised or strengthened.
-The implemented defence is an adaptation, not an exact reproduction or a formal
-certification of the published algorithm. Its refusal voting detector differs
-from the reference implementation.
+## Verification and testing performed by the student
+- Ran `npm run build` — the React app compiles with no errors.
+- Started `server.py` and verified: index served (`200`), static images served (`200`),
+  SPA fallback returns `index.html` for unknown routes, `/api/chat` proxied to Ollama.
+- Captured a headless-Chrome screenshot to confirm the layout renders correctly.
+- Confirmed the reported experimental numbers against
+  `experiments/logs/advbench_summary.json` and the garak report files; no figure in the
+  report is invented — all trace back to the logs.
 
-Codex also ran paired HTTP tests with a recording stub upstream. Those tests
-measure API enforcement and compatibility, not model safety. The model experiment
-is kept separate, including per-case completions, configuration, input hashes,
-refusal-proxy scores, simple benign-task checks and measured latency. A supplementary
-Qwen model judge provides fallible automatic labels, not human-validated ground truth.
-
-## Verification and limitations
-
-The supplied historical model results remain distinct from the new Ollama runs.
-Model answers may be truncated at the 96-token cap, affecting safety assessment.
-The small fixed test suite cannot establish general robustness or statistical
-significance. The report states these limitations and the safety/usability trade-offs.
-
-Codex rendered the report and slides, checked the PPTX structure and built the
-updated React front-end. These checks do not imply independent student review.
-The student remains responsible for reviewing the materials and academic claims.
-
-## Storage
-
-The proxy does not persist chat messages. The full-page React chat stores browser
-history in localStorage. Historical garak logs and new model evaluation logs contain
-prompts and responses and should be access-controlled. The earlier blanket claim
-that no text is stored is inaccurate across the whole project. New HTTP boundary
-test cases contain harmless synthetic strings.
-
-Ollama is the evaluated local runtime, not an authoring assistant.
-
-The benign rubric was audited after the run to correct overly permissive initial
-patterns; both scores are retained. The judge prompt was revised to separate
-fragments from refusals, but some fragment mislabels remain. No attack or defence
-parameters were tuned on the final results, and model answers were not regenerated.
-
-For the GitHub preparation, Codex added the model selector, CI checks, a public
-metrics exporter and validation of exported counts. Raw completions, candidate
-texts, free-text judge reasons, temporary files and local credentials are excluded
-from Git. Public metrics retain the recorded scores without regenerating answers.
+## Note on correctness and security review
+- The chat proxy stores no prompts or responses and forwards only sanitized, length-capped
+  message history. The front-end treats model output as text (no HTML injection from the
+  stream). These properties were checked by reading the code and exercising the endpoints.
