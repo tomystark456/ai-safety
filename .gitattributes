@@ -1,0 +1,21 @@
+* text=auto
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+Modelfile* text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.pdf binary
+*.pptx binary
+*.jpg binary
+*.png binary
+# Preserve the exact benchmark bytes used by recorded SHA-256 fingerprints.
+/experiments/data/gcg_evaluation_cases.json -text whitespace=cr-at-eol
