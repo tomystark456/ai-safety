@@ -17,6 +17,7 @@ __pycache__/
 *.log
 *.tmp
 *.bak
+~$*
 
 # Credentials and machine-specific assistant/tool settings
 .env
