@@ -1,5 +1,7 @@
 """Deterministic API boundary checks, independent of model compliance."""
 
+from presidio_guard import redact_pii
+
 MAX_BODY_BYTES = 65536
 MAX_MESSAGE_CHARS = 4000
 MAX_HISTORY = 12
@@ -37,7 +39,7 @@ def validate_messages(body):
             raise ValidationError("content_must_be_nonempty_text")
         if len(content) > MAX_MESSAGE_CHARS:
             raise ValidationError("message_too_long", 413)
-        cleaned.append({"role": message["role"], "content": content.strip()})
+        cleaned.append({"role": message["role"], "content": redact_pii(content.strip())})
     if cleaned[-1]["role"] != "user":
         raise ValidationError("last_message_must_be_user")
     return [{"role": "system", "content": SYSTEM_PROMPT}] + cleaned[-MAX_HISTORY:]
