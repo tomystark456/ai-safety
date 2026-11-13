@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="511.27559055118115" height="224" preserveAspectRatio="xMinYMin meet" viewBox="0 0 511 224" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="511.27559055118115" height="224"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-224)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="164" width="150" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="42.651" y="190" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,380) scale(1,-1)">USER REQUEST</text>
+			<text x="31.432000000000002" y="176" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">Operator starts local service</text>
+			<rect x="180.63779527559058" y="164" width="150.0" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="222.60819527559056" y="190" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,380) scale(1,-1)">API VALIDATION</text>
+			<text x="215.37729527559057" y="176" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">Reject invalid roles / sizes</text>
+			<rect x="361.27559055118115" y="164" width="150.0" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,96%); fill-rule: evenodd;"/>
+			<text x="394.4760905511812" y="190" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,380) scale(1,-1)">OLLAMA + DEFENCE</text>
+			<text x="390.35909055118117" y="176" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">Generate; no auto publication</text>
+			<path d="M 150,186 L 180.637795,186 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="180.6378 186, 175.6378 189, 175.6378 183" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+			<path d="M 330.637795,186 L 361.275591,186 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="361.2756 186, 356.2756 189, 356.2756 183" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+			<rect x="361.27559055118115" y="88" width="150.0" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,94%,84%); fill-rule: evenodd;"/>
+			<text x="392.76639055118113" y="114" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,228) scale(1,-1)">ARCHIVED EVIDENCE</text>
+			<text x="388.42709055118115" y="100" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">Fixed A3 metrics; offline replay</text>
+			<path d="M 436.275591,164 L 436.275591,131 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="436.2756 131, 433.2756 136, 439.2756 136" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+			<text x="422.5795905511811" y="152.5" style="font-family: Helvetica; font-size: 6.4px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,305) scale(1,-1)">A3 export</text>
+			<rect x="180.63779527559058" y="88" width="150.0" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,94%,84%); fill-rule: evenodd;"/>
+			<text x="217.70869527559057" y="114" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,228) scale(1,-1)">POLICY + MLFLOW</text>
+			<text x="208.7587952755906" y="100" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">Auto metrics, thresholds, flags</text>
+			<path d="M 361.275591,110 L 330.637795,110 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="330.6378 110, 335.6378 113, 335.6378 107" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+			<rect x="0" y="88" width="150" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,94%,84%); fill-rule: evenodd;"/>
+			<text x="19.4204" y="114" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,228) scale(1,-1)">AUDIT AND REVIEW QUEUE</text>
+			<text x="24.613999999999997" y="100" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">Generated flags; review pending</text>
+			<path d="M 180.637795,110 L 150,110 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="150 110, 155 113, 155 107" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+			<rect x="0" y="12" width="150" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 4, 2;"/>
+			<text x="35.3694" y="38" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,76) scale(1,-1)">HUMAN OPERATOR</text>
+			<text x="28.113999999999997" y="24" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,48) scale(1,-1)">Inspect; approve / reject / stop</text>
+			<path d="M 75,88 L 75,55 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 3;"/>
+			<polygon points="75 55, 72 60, 78 60" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+			<text x="61.6592" y="76.5" style="font-family: Helvetica; font-size: 6.4px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,153) scale(1,-1)">proposed</text>
+			<rect x="180.63779527559058" y="12" width="150.0" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 4, 2;"/>
+			<text x="216.46639527559057" y="38" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,76) scale(1,-1)">MANUAL CONTROL</text>
+			<text x="210.30929527559056" y="24" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,48) scale(1,-1)">Stop proxy; hold release; edit</text>
+			<path d="M 150,34 L 180.637795,34 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 3;"/>
+			<polygon points="180.6378 34, 175.6378 37, 175.6378 31" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+			<rect x="361.27559055118115" y="12" width="150.0" height="43" rx="5" ry="5" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 4, 2;"/>
+			<text x="385.02559055118115" y="38" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,24%,34%); stroke:none;" transform="translate(0,76) scale(1,-1)">RETEST AND AUTHORIZE</text>
+			<text x="389.39659055118113" y="24" style="font-family: Helvetica; font-size: 7.0px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,48) scale(1,-1)">Record decision before restart</text>
+			<path d="M 330.637795,34 L 361.275591,34 Z" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 3;"/>
+			<polygon points="361.2756 34, 356.2756 37, 356.2756 31" style="stroke: rgb(9%,24%,34%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,34%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

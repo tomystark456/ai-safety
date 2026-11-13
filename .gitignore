@@ -2,6 +2,7 @@
 node_modules/
 dist/
 .venv/
+.venv-monitoring/
 venv/
 __pycache__/
 *.py[cod]
@@ -47,3 +48,7 @@ desktop.ini
 
 # Large optional upstream dataset; the exact 40-case fixture is committed
 /experiments/data/advbench_harmful_behaviors.csv
+
+# Russian speaker script (kept local, not committed)
+/report/assignment4/Speaker_Notes_RU.md
+/report/assignment4/QA_RU.md

@@ -1,0 +1,78 @@
+{
+  "decision": "NO-GO",
+  "scope": "public or unattended deployment",
+  "research_scope": "authorised supervised local research may continue",
+  "basis": {
+    "policy_id": "assignment4-pilot-v1",
+    "alert_count": 4,
+    "live_controls_integrated": false,
+    "independent_human_adjudication": false
+  },
+  "risks": [
+    {
+      "risk": "Jailbreak / harmful output",
+      "existing_control_or_evidence": "Prompt + smoothing; lexical suffix bypass 1/10; judge 0/30 for Smooth",
+      "monitoring_or_oversight": "Judge alert + operator review",
+      "residual": "High: tiny, dependent set; labels uncalibrated"
+    },
+    {
+      "risk": "Useful task corruption",
+      "existing_control_or_evidence": "Smooth audited success 3/10 versus Guarded 7/10",
+      "monitoring_or_oversight": "10-case quality gate; inspect failures",
+      "residual": "High: current default fails pilot gate"
+    },
+    {
+      "risk": "Latency / overload",
+      "existing_control_or_evidence": "Mean benign 2.65 s; five calls; no global concurrency cap",
+      "monitoring_or_oversight": "Latency gate; operator holds rollout",
+      "residual": "High: no load test or total deadline"
+    },
+    {
+      "risk": "Fabricated facts",
+      "existing_control_or_evidence": "UI warns users; no grounded fact verification",
+      "monitoring_or_oversight": "Editor checks every publishable answer",
+      "residual": "High: factuality rate unmeasured"
+    },
+    {
+      "risk": "Privacy / retention",
+      "existing_control_or_evidence": "Browser localStorage; private research logs",
+      "monitoring_or_oversight": "No sensitive inputs; clear history; restrict logs",
+      "residual": "Medium: no enforced retention policy"
+    },
+    {
+      "risk": "API misuse / forged history",
+      "existing_control_or_evidence": "Improved proxy 0/24 invalid forwarded; client history unauthenticated",
+      "monitoring_or_oversight": "Boundary release gate; restrict access",
+      "residual": "Medium: stub coverage only"
+    },
+    {
+      "risk": "Missed or false flags",
+      "existing_control_or_evidence": "Regex and single judge disagree; no human calibration",
+      "monitoring_or_oversight": "Review critical flags and sampled unflagged cases",
+      "residual": "High: operational false alarm rate unknown"
+    }
+  ],
+  "acceptance_gates": [
+    {
+      "condition": "Independent human review and larger held-out safety/quality evaluation",
+      "status": "pending"
+    },
+    {
+      "condition": "Approved configuration meeting calibrated task and latency budgets",
+      "status": "pending"
+    },
+    {
+      "condition": "Tested runtime logging, alert routing, shutdown and restart authorization",
+      "status": "pending"
+    },
+    {
+      "condition": "Bounded concurrency, total request deadline and real outage/load tests",
+      "status": "pending"
+    },
+    {
+      "condition": "Approved privacy/retention procedure and mandatory editorial review",
+      "status": "pending"
+    }
+  ],
+  "authorization": "Research recommendation only; no human operational approval or legal compliance asserted"
+}

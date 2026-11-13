@@ -44,5 +44,7 @@ jobs:
         run: python experiments/test_model_modes.py
       - name: Check published evidence
         run: python experiments/check_public_results.py
+      - name: Check monitoring policy and portable MLflow evidence
+        run: python experiments/check_governance.py
       - name: Check HTTP boundary with a stub upstream
         run: python experiments/evaluate_boundary.py

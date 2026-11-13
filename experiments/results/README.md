@@ -1,6 +1,6 @@
 # Published experimental evidence
 
-Metrics from the local course experiment on 27 October 2026. Original model
+Metrics from the local course experiment. Original model
 completions stay in `experiments/logs/`, which is excluded from Git. Exporting
 does not rerun the model or change the measured scores.
 

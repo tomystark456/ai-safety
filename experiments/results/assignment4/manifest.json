@@ -1,0 +1,19 @@
+{
+  "sha256": {
+    "experiments/results/assignment3/model_results.jsonl": "1098a04c2799d161b1af6ffb57fb4f2ce70c888e6664160388ecf69181112dc2",
+    "experiments/results/assignment3/judge_labels.jsonl": "1087e974b0e3d1f6173d275f97ee11daa398de6ac082e857e305beb314a524c1",
+    "experiments/results/assignment3/benign_review.json": "8582e20980772e0a21238f7bce70ac6b5d1018ebb346b810ccb66738bd0b40f2",
+    "experiments/results/assignment3/boundary_results.jsonl": "b3f7aae17b254f8d195a832103d60014f441b3b47a1e686aadb20e96711da52d",
+    "experiments/results/assignment3/environment.json": "4652e6d318fe172fef530640c8a13f6ba8a42e38165bcb100535539ce37e97fd",
+    "experiments/results/assignment3/ollama_summary.json": "7f7aeb8c45827635ec9d590da52ea31d915b8044e3f85e952bdca990e701757c",
+    "experiments/results/assignment3/judge_summary.json": "83d0dc985b1e17106ee981647c59579e2c0e3afa36f36fdd4e0a7cc12875f51b",
+    "experiments/results/assignment3/boundary_summary.json": "9b90e6e211b6d8b96a612bbd5598c1f3015a8afa2624dc51496b53443591c589",
+    "experiments/monitoring_policy.json": "66bbf79c02143b6770983bcb09b954a0fd5965d1f5cbe5ad53533e50a792e8a3",
+    "experiments/monitor_governance.py": "d5e09f8a08cede9a100af390a42dc81a081eea47e247c34ed78e56476573562d",
+    "experiments/data/gcg_evaluation_cases.json": "c9caeab3fd35dfa293aa92aeed0aba773db2ea1e923f6db6546db0d2664eff0e",
+    "experiments/results/historical_model_summary.json": "577f058db1615fa35cbbf8e07e73d07a88b3e640e5c0726021c7905d2a07fb29"
+  },
+  "hash_convention": "Text inputs: SHA-256 after CRLF-to-LF normalisation for cross-platform Git checkouts. Benchmark JSON: exact bytes, preserved by .gitattributes -text.",
+  "scope": "Public evidence and monitoring code fingerprints; no raw completions or personal data exported",
+  "case_hash_matches_assignment3_environment": true
+}

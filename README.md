@@ -1,4 +1,28 @@
-# Local LLM Safety - Assignment 3
+# Local LLM Safety - Assignment 4
+
+## Assignment 4: monitoring and governance
+
+Готовое продолжение использует реальные запуски MLflow и офлайн-проверку сохранённых
+измерений Assignment 3. Мониторинг формирует четыре предупреждения; итоговая
+рекомендация — **NO-GO для публичного или автономного использования**.
+Локальное исследование под контролем оператора может продолжаться.
+
+- [English report, 3 pages](report/assignment4/Assignment4_Governance_Report.pdf)
+- [Monitoring appendix](report/assignment4/Assignment4_Monitoring_Appendix.pdf)
+- [Presentation](report/assignment4/Assignment4_Presentation.pptx)
+- [Oversight workflow](report/assignment4/Oversight_Workflow.svg)
+- [Portable evidence dashboard](experiments/results/assignment4/dashboard.html)
+- [Deployment decision](report/assignment4/Deployment_Readiness_Decision.json)
+- [Reproduction commands and deliverable map](docs/ASSIGNMENT4.md)
+
+Скрипт `experiments/monitor_governance.py` применяет MLflow к прежним метрикам;
+новые вызовы модели не выполняются. Онлайн-блокировка и действия оператора
+описаны как будущая процедура, а не как внедрённая функциональность.
+Материалы находятся в `report/assignment4/`, `experiments/results/assignment4/`
+и исходных файлах проекта; презентацию собирает `experiments/build_assignment4_presentation.py`. Локальные экспорты,
+зависимости, база MLflow и сырые журналы исключены через `.gitignore`.
+
+## Assignment 3
 
 Учебное исследование защиты локального ИИ-помощника от GCG jailbreak-суффиксов.
 **QAIRU · AISRA1301 · AI Security and Risk Analysis.**
@@ -9,11 +33,12 @@
 ## Материалы
 
 - [Технический отчёт, English PDF, 3 страницы](report/assignment3/Assignment3_Technical_Report.pdf)
-- [Презентация, 14 слайдов](report/assignment3/Assignment3_Presentation.pptx)
-- [Заметки докладчика на русском](report/assignment3/Speaker_Notes_RU.txt)
 - [Результаты без текстов ответов моделей](experiments/results/README.md)
 - [Подробная методология и соответствие заданию](docs/EXPERIMENTS.md)
 - [Декларация использования ИИ](AI_USE_DECLARATION.md)
+
+Отчёт и измерения Assignment 3 сохранены как исходные материалы для Assignment 4.
+Старые презентации, заметки докладчика и временные черновики удалены.
 
 ## Быстрый запуск
 
@@ -60,7 +85,7 @@ python site/server.py
 
 ## Эксперимент и результаты
 
-Новый прогон от 27 октября 2026: три конфигурации, одинаковые 40 входов на каждую,
+Основной прогон: три конфигурации, одинаковые 40 входов на каждую,
 120 выбранных ответов и 280 генераций без прогрева. В наборе по 10 прямых запросов,
 запросов с опубликованным суффиксом, cached-GCG входов и безвредных задач.
 
